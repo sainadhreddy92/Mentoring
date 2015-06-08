@@ -1,0 +1,21 @@
+%h1 Survey Builder Dashboard
+
+
+%table#surveys
+  %thead
+    %tr
+      %th User ID
+      %th User Role
+      %th Current Group
+      %th Work City
+      
+  %tbody
+   
+      - @users.each do |user|
+        %tr
+          
+          %td= user.cec_id
+          %td= user.user_role
+          %td= user.current_group
+	  %td= user.work_city
+          
