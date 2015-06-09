@@ -1,0 +1,8 @@
+class CurrentMenteesController < ApplicationController
+
+		
+	def index
+ 		@current_mentees = CurrentMentee.all
+	end	
+
+end

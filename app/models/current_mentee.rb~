@@ -1,0 +1,3 @@
+class CurrentMentee < ActiveRecord::Base
+  attr_accessible :mentor_id, :area_of_interest, :response_values, :response_type, :dependency
+end

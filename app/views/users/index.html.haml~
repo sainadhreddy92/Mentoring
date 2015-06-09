@@ -1,4 +1,7 @@
 -# homepage
+%h1 Home Page
 
-
-	= button_to 'Mentor'
+%div#menuDiv
+	= link_to 'Mentor', current_mentors_path , :class =>'btn'
+	= link_to 'Mentee', current_mentees_path , :class =>'btn'
+	
