@@ -93,21 +93,47 @@ table#users th, table#users td {
   margin: 1em 0;
   padding: 4px;
 }
-form label {
+
+
+form {
+  
+  position: relative;
+  margin-left : 25px;
+  float: bottom;
+  width: auto;	
+}
+
+
+label {
+    display: block;
+    
+}
+
+text{
+  display:block;
+  position:relative;
+  text-align:center;
+  width:20%;
+  background-color:#00FF00;
+}
+
+input[type = 'submit']{	
   display: block;
-  line-height: 25px;
+  width: relative;
+  
+  padding: 3px;
+  font-size: 14px;
+  color: #f2f2f2;
+  background: #E05151;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
-  color: maroon;
-}
+  font-size: 16px;
+ }
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: auto;
-  margin-bottom: 15px;
-  @include box_sizing;
-  display: block;
-}
 
-input {
-  height: auto !important;
-}
+input[type='checkbox'] { display: block; float: left; margin-left: -25px;}
+
+
+
