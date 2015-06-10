@@ -2,7 +2,7 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
 	t.string 'user_role'
-	t.string 'cec_id'
+	t.string 'cisco_email'
 	t.string 'current_group'
 	t.string 'work_city'
 	t.boolean 'conflict_resolution'
