@@ -11,7 +11,19 @@ class UsersController < ApplicationController
 	def new
 	 @user = User.new
 	end
-	
+
+	def create
+    		@user = User.new(user_params)    # Not the final implementation!
+    		if @user.save
+      			
+      			redirect_to 
+    		else
+			flash[:notice] = "#Error regsitering."
+      			render 'new'
+    	         end
+        end
+
+	private
 	##Strong Parametres
 	def user_params
 	 params.require(:user).permit(:user_role, :cisco_email, :current_group, :work_city, :conflict_resolution, :customer_know_how, :personal_branding,

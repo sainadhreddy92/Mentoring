@@ -106,6 +106,7 @@ form {
 
 label {
     display: block;
+    margin: 10px 0;
     
 }
 
@@ -133,7 +134,7 @@ input[type = 'submit']{
  }
 
 
-input[type='checkbox'] { display: block; float: left; margin-left: -25px;}
+input[type='checkbox'] { display: block; float: left; margin-left: -25px; }
 
 
 

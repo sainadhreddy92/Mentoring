@@ -48,3 +48,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'protected_attributes'
+gem 'jquery-turbolinks'
+

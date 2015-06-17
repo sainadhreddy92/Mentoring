@@ -1,0 +1,7 @@
+$(document).on('click', '#user_tech_know', function (event) {
+  if (this.checked) {
+    $('#user_other').show();
+  } else {
+    $('#user_other').hide();
+  }
+});

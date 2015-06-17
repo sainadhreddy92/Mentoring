@@ -1,4 +1,6 @@
-- provide(:title, 'Registration')
+%script(src ="/app/assets/a.js")
+
+
 %h1 Registration
 %h2 User Information
 .row
@@ -41,8 +43,8 @@
       = f.label :think_out_box, 'Creative Thinking/Think Out Of the box'
       = f.check_box :tech_know
       = f.label :tech_know, 'Technical Know-How, List Areas'
-      = f.text_field :other
-      = f.label :other, 'Any Other'
+      = f.text_field :tech_areas
       = f.check_box :other
+      = f.label :other, 'Any Other'      
       = f.text_field :other_areas
       = f.submit "Register Me", class: "btn btn-primary"
