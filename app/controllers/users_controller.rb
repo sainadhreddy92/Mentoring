@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	def index
 	end
 	
+	
 	def show
 	   @user = User.find(params[:id])
 	end
@@ -15,8 +16,8 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(user_params)    # Not the final implementation!
     		if @user.save
-      			
-      			redirect_to current_mentors_path
+      			flash[:success] = "Welcome to the CSG Mentoring Tool!"
+      			redirect_to @user
     		else
 			flash[:notice] = "#Error regsitering."
       			render 'new'

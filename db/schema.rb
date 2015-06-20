@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150608233407) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string  "user_role"
+    t.boolean "user_role"
     t.string  "cisco_email"
     t.string  "current_group"
     t.string  "work_city"

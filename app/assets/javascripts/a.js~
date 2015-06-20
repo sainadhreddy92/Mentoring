@@ -17,6 +17,7 @@ $(document).ready(function(){
 			$('#user_tech_areas').show();
 		else 
 			$('#user_tech_areas').hide();
+
 		if($('#user_other').is(':checked')) 
 			$('#user_other_areas').show();
 		else 
