@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     		else 
 			flash[:notice] = "Error regsitering."
 			
+
 			if params[:user][:user_role]
                           render :partial => 'users/mentor', :layout => 'partial'
 			 else

@@ -22,10 +22,20 @@ $(document).ready(function(){
 			$('#user_other_areas').show();
 		else 
 			$('#user_other_areas').hide();
- 
+
+        if(($(":checkbox:checked").length)> 3)
+	alert('Sorry, only maximum 3 boxes may be checked.');
 		
 	
 	});
+	
+
+	if(($(":checkbox:checked").length)> 3)
+	alert('Sorry, only maximum 3 boxes may be checked.');
+		
+
+
+
 });
 
 

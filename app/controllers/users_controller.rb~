@@ -20,9 +20,10 @@ class UsersController < ApplicationController
       			redirect_to @user
     		else 
 			flash[:notice] = "Error regsitering."
-			
+			render :partial => 'users/shared/error_messages', :layout => 'partial'
+
 			if params[:user][:user_role]
-                          render :partial => 'users/mentor', :layout => 'application'
+                          render :partial => 'users/mentor', :layout => 'partial'
 			 else
   		          render :new
      			end
