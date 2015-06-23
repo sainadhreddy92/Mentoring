@@ -2,25 +2,21 @@
 
 
 %h1 Mentee Registration
-%h2 Mentee Information
-.row
-  .col-md-6.col-md-offset-3
-    = form_for(@user) do |f|
-      = f.label :cisco_email,'Cisco Email'
-      = f.email_field :cisco_email
-      = f.label :name, 'Current group'
-      = f.text_field :current_group
-      = f.label :name, 'Current work location,city'
-      = f.text_field :work_city
-      
 
-%h2 Development Goals: check at least one box that apply, can select maximum of 3
 .row
   .col-md-6.col-md-offset-3
     = form_for(@user) do |f|
-      
+      = f.label :'Mentee Information'
+      = f.label :'Cisco Email'
+      = f.email_field :cisco_email
+      = f.label :'Current group'
+      = f.text_field :current_group
+      = f.label :'Current work location,city'
+      = f.text_field :work_city  
+      = f.label :'Developmental goals ,  check at least one box that apply, can select max 3 choices from the list below'
       = f.check_box :conflict_resolution
       = f.label :conflict_resolution, 'Conflict Resolution'
+      
       = f.check_box :customer_know_how
       = f.label :customer_know_how, 'Customer Know How'
       = f.check_box :exec_acheive_results
