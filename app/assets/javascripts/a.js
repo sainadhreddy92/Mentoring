@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	
+                  
 		if($('#user_tech_know').is(':checked')) 
 			$('#user_tech_areas').show();
 		else 

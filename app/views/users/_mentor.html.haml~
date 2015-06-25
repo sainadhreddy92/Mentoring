@@ -16,6 +16,8 @@
       = f.label :'Current work location,city'
       = f.select :work_city, options_for_select(%w[Bangalore-India Chennai-India Hyderabad-India SanJose/Milpitas SanFrancisco Ottawa RTP Switzerland]), include_blank: true 
       = f.label :'Areas of strength for mentoring, check at least one box and at most 3 boxes that apply'
+      = f.label :'Current Job Role'
+      = f.text_field :job_role
       = f.check_box :conflict_resolution
       = f.label :conflict_resolution, 'Conflict Resolution'
       = f.check_box :customer_know_how

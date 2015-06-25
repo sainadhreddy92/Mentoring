@@ -1,0 +1,16 @@
+
+%h1 Welcome to Mentee Dashboard
+%h2 Mentee Details
+%table#users
+  %thead
+    %tr
+      %th Email ID
+      %th Work Group
+      %th Work Location
+      
+  %tbody    
+    %tr
+      %td= @user.cisco_email
+      %td= @user.current_group
+      %td= @user.work_city
+        

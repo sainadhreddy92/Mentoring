@@ -1,24 +1,25 @@
 %script(src ="/app/assets/a.js")
 
 
-%h1 Mentee Registration
+%h1 Mentor Registration
 
 .row
   .col-md-6.col-md-offset-3
     = form_for(@user) do |f|
       = render 'error_messages'
-      = f.label :'Mentee Information'
+      = f.hidden_field :user_role, value: true
+      = f.label :'Partcipating PE/DE/Dir/Sr Dir/VP Information'
       = f.label :'Cisco Email'
       = f.email_field :cisco_email
       = f.label :'Current group'
       = f.text_field :current_group
       = f.label :'Current work location,city'
-      = f.select :work_city, options_for_select(%w[Bangalore-India Chennai-India Hyderabad-India SanJose/Milpitas SanFrancisco Ottawa RTP Switzerland]), include_blank: true
-      = f.label :'Developmental goals ,  check at least one box that apply, can select max 3 choices from the list below'
+      = f.select :work_city, options_for_select(%w[Bangalore-India Chennai-India Hyderabad-India SanJose/Milpitas SanFrancisco Ottawa RTP Switzerland]), include_blank: true 
       = f.label :'Current Job Role'
       = f.text_field :job_role
+      = f.label :'Areas of strength for mentoring, check at least one box and at most 3 boxes that apply'
       = f.check_box :conflict_resolution
-      = f.label :conflict_resolution, 'Conflict Resolution'      
+      = f.label :conflict_resolution, 'Conflict Resolution'
       = f.check_box :customer_know_how
       = f.label :customer_know_how, 'Customer Know How'
       = f.check_box :exec_acheive_results

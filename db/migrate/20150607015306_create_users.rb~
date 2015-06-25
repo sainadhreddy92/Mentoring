@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
 	t.string 'cisco_email'
 	t.string 'current_group'
 	t.string 'work_city'
+        t.string 'job_role'
 	t.boolean 'conflict_resolution'
 	t.boolean 'customer_know_how'
 	t.boolean 'personal_branding'

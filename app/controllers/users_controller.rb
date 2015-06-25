@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 		
 	def index
+       	    @users = User.where(:survey_id => params[:survey_id])
 	end
 	
 	
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
 			
 
 			if params[:user][:user_role]
-                          render :partial => 'users/mentor', :layout => 'partial'
+                          render :partial => 'users/mentor_form', :layout => 'partial'
 			 else
   		          render :new
      			end
