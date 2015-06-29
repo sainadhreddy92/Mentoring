@@ -1,0 +1,17 @@
+%h1 Feedback Form
+
+.row
+  .col-md-6.col-md-offset-3
+    = form_for(@feedback) do |f|
+      
+      = f.label :goal_status,'1. Did this program help you in acheive your goal?'
+      = f.select :goal_status, options_for_select(%w[Yes No Maybe]), include_blank: true
+      = f.label :suggest_status, '2. Would you suggest this mentoring program to your friends/peers ?'
+      = f.select :suggest_status, options_for_select(%w[Yes No Maybe]), include_blank: true
+      = f.label :support_status,'3. Did you get adequate support and help during program?'
+      = f.select :support_status, options_for_select(%w[Yes No Maybe]), include_blank: true
+      = f.label :'4. Do you have any problems that you want to be escalated to HR?'
+      = f.select :problem, options_for_select(%w[Yes No]), include_blank: true
+      = f.label :'5. Any other comments/suggestion for improvement? '
+      = f.text_area :suggestions
+      = f.submit "Submit Feedback", class: "btn btn-primary"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608233407) do
+ActiveRecord::Schema.define(version: 20150628192949) do
 
   create_table "current_mentees", force: :cascade do |t|
     t.string "mentor_id"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20150608233407) do
     t.string "are_of_interest"
     t.text   "notes"
   end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.string   "problem"
+    t.string   "goal_status"
+    t.string   "suggest_status"
+    t.string   "support_status"
+    t.text     "suggestions"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "user_id"
+  end
+
+  add_index "feedbacks", ["user_id"], name: "index_feedbacks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.boolean "user_role"
