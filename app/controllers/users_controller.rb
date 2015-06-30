@@ -17,10 +17,10 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-      			flash[:success] = "Welcome to the CSG Mentoring Tool!"
+      			flash[:notice] = "User created successfully!"
       			redirect_to @user
     		else 
-			flash[:notice] = "Error regsitering."
+			flash[:warning] = "Error regsitering."
 			
 
 			if params[:user][:user_role]

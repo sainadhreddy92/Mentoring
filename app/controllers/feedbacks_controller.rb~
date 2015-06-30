@@ -15,11 +15,11 @@ class FeedbacksController < ApplicationController
 		params[:feedback][:user_id] = params[:user_id]
 		@feedback = Feedback.new(params[:feedback])
 		if @feedback.save 
-			flash[:success] = "Feedback submitted successfully"
+			flash[:notice] = "feedback submitted successfully!"
 			render :new
 			
 		else 
-			flash[:notice] = "Error submitting feedback."
+			flash[:warning] = "Error submitting feedback."
 			render :new
 		end
 			

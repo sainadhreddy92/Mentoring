@@ -11,6 +11,10 @@
       = f.label :'Partcipating PE/DE/Dir/Sr Dir/VP Information'
       = f.label :'Cisco Email'
       = f.email_field :cisco_email
+      = f.label :'Password',class: 'form-control'
+      = f.password_field :password
+      = f.label :'Password Confirmation',class: 'form-control'
+      = f.password_field :password_confirmation
       = f.label :'Current group'
       = f.text_field :current_group
       = f.label :'Current work location,city'

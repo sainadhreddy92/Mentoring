@@ -7,10 +7,15 @@
       %th Email ID
       %th Work Group
       %th Work Location
+      %th Password
+      
+      
       
   %tbody    
     %tr
       %td= @user.cisco_email
       %td= @user.current_group
       %td= @user.work_city
+      %td= @user.password_digest
+      
         

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628192949) do
+ActiveRecord::Schema.define(version: 20150629212029) do
 
   create_table "current_mentees", force: :cascade do |t|
     t.string "mentor_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150628192949) do
     t.boolean "other"
     t.string  "tech_areas"
     t.string  "other_areas"
+    t.string  "password_digest"
   end
 
 end
