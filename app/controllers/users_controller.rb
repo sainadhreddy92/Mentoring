@@ -17,8 +17,10 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-      			flash[:notice] = "User created successfully!"
+    			log_in @user
+      			flash[:notice] = "User Created Successfully!"
       			redirect_to @user
+      
     		else 
 			flash[:warning] = "Error regsitering."
 			

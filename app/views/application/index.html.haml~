@@ -1,3 +1,4 @@
+= stylesheet_link_tag 'all'
 -# homepage
 %h1 Welcome to CSG Mentoring Program
 

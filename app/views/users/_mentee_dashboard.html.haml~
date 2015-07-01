@@ -1,4 +1,4 @@
-
+= stylesheet_link_tag 'all'
 %h1 Welcome to Mentee Dashboard
 %h2 Mentee Details
 %table#users
@@ -15,4 +15,4 @@
       %td= @user.work_city
         
 %div#menuDiv
-         = link_to 'Feedback', new_feedback_path, :class =>'btn'
+  = link_to 'Feedback', new_feedback_path, :class =>'btn'

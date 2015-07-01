@@ -1,3 +1,4 @@
+= stylesheet_link_tag 'all'
 %h1 Feedback Form
 
 .row
@@ -10,8 +11,8 @@
       = f.select :suggest_status, options_for_select(%w[Yes No Maybe]), include_blank: true
       = f.label :support_status,'3. Did you get adequate support and help during program?'
       = f.select :support_status, options_for_select(%w[Yes No Maybe]), include_blank: true
-      = f.label :'4. Do you have any problems that you want to be escalated to HR?'
+      = f.label :problem,'4. Do you have any problems that you want to be escalated to HR?'
       = f.select :problem, options_for_select(%w[Yes No]), include_blank: true
-      = f.label :'5. Any other comments/suggestion for improvement? '
+      = f.label :suggestions,'5. Any other comments/suggestion for improvement? '
       = f.text_area :suggestions
       = f.submit "Submit Feedback", class: "btn btn-primary"
