@@ -19,23 +19,3 @@
       %td= mentor.work_city
       %td= mentor.password_digest    
       %td= link_to "delete",mentor, method: :delete,data: { confirm: "You sure?" }
-
-%h1 All Mentees
-%table#mentees
-  %thead
-    %tr
-      %th Email ID
-      %th User role
-      %th Work Group
-      %th Work Location
-      %th Password
-      %th Delete
-  %tbody
-  - @mentees.each do |mentee| 
-    %tr
-      %td= mentee.cisco_email
-      %td= mentee.user_role
-      %td= mentee.current_group
-      %td= mentee.work_city
-      %td= mentee.password_digest    
-      %td= link_to "delete",mentee, method: :delete,data: { confirm: "You sure?" }

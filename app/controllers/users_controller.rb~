@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
 		
 	def index
-       	  @users = User.where(params[:user_role] == 'mentor')
+       	  @mentors = User.where("user_role == 'mentor'")
+          @mentees = User.where("user_role == 'mentee'")
 	end
 	
 	

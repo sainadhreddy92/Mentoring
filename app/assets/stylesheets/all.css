@@ -73,18 +73,18 @@ h1.title {
   font-style: normal;
   text-align: center;
 }
-table#users {
+table {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#users th {
+table th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#users th, table#users td {
+table th, table td {
   padding: 4px;
   text-align: left;
 }
