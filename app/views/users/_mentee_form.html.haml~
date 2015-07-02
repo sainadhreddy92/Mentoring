@@ -8,6 +8,7 @@
     = form_for(@user) do |f|
       = render 'error_messages'
       = f.label :'Mentee Information'
+      = f.hidden_field :user_role, value: 'mentee'
       = f.label :'Cisco Email'
       = f.email_field :cisco_email
       = f.label :'Password'

@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150629212029) do
   add_index "feedbacks", ["user_id"], name: "index_feedbacks_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.boolean "user_role"
+    t.string  "user_role"
     t.string  "cisco_email"
     t.string  "current_group"
     t.string  "work_city"

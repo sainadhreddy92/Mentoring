@@ -1,4 +1,6 @@
-- if @user.user_role
+- if @user.user_role == 'admin'
+  = render 'admin_dashboard'
+- elsif @user.user_role == 'mentor'
   = render 'mentor_dashboard'
 - else
   = render 'mentee_dashboard'

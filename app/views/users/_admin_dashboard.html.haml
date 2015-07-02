@@ -1,19 +1,23 @@
 = stylesheet_link_tag 'all'
-
-%h1 Welcome to Mentee Dashboard
-%h2 Mentee Details
+%h1 Welcome to Admin Dashboard
+%h2 Admin's Details
 %table#users
   %thead
     %tr
       %th Email ID
       %th Work Group
       %th Work Location
+      %th Password
+      
+      
       
   %tbody    
     %tr
       %td= @user.cisco_email
       %td= @user.current_group
       %td= @user.work_city
-        
-%div#menuDiv
-  = link_to 'Feedback', new_feedback_path, :class =>'btn'
+      %td= @user.password_digest
+      
+         
+
+= link_to 'Delete a Mentor', users_path, :class =>'btn'

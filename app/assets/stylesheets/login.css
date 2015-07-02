@@ -23,6 +23,12 @@ textarea {
   margin-bottom: 10px;
 }
 
+#notice, #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }

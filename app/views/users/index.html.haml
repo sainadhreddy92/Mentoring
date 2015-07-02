@@ -1,8 +1,21 @@
 = stylesheet_link_tag 'all'
--# homepage
-%h1 Welcome to CSG Mentoring Program
 
-%div#menuDiv
-	= link_to 'Regsiter as a Mentor', new_user_path(user_role: true), :class =>'btn'
-	= link_to 'Register as a Mentee', new_user_path, :class =>'btn'
-	
+%h1 All users
+%table#Users
+  %thead
+    %tr
+      %th Email ID
+      %th User role
+      %th Work Group
+      %th Work Location
+      %th Password
+      %th Delete
+  %tbody
+  - @users.each do |user| 
+    %tr
+      %td= user.cisco_email
+      %td= user.user_role
+      %td= user.current_group
+      %td= user.work_city
+      %td= user.password_digest    
+      %td= link_to "delete",user, method: :delete,data: { confirm: "You sure?" }

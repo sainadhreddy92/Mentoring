@@ -8,13 +8,14 @@ class SessionsController < ApplicationController
        log_in user
        redirect_to user
     else
-      flash[:warning] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:warning] = 'Invalid email/password combination' # Not quite right!
       render 'new'
     end
   end
 
   def destroy
     log_out
+    flash[:notice] = 'Logged Out Successfully'
     redirect_to root_url
   end
 end

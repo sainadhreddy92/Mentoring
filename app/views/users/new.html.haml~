@@ -1,4 +1,4 @@
-- if params[:user_role]
+- if params[:user_role] == 'mentor'
   = render 'mentor_form'
 - else
   = render 'mentee_form'

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 		
 	def index
-       	    @users = User.where(:survey_id => params[:survey_id])
+       	  @users = User.where(params[:user_role] == 'mentor')
 	end
 	
 	
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 			flash[:warning] = "Error regsitering."
 			
 
-			if params[:user][:user_role]
+			if params[:user][:user_role]=='mentor'
                           render :partial => 'users/mentor_form', :layout => 'partial'
 			 else
   		          render :new
@@ -33,6 +33,10 @@ class UsersController < ApplicationController
     	         end
         end
 
-	
+	def destroy
+    		User.find(params[:id]).destroy
+    		flash[:success] = "User deleted"
+    		redirect_to users_url
+  	end
 	
 end
