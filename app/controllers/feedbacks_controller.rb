@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
 
 		
 	def index
- 		
+ 		@feedbacks = Feedback.includes(:user).all
 	end	
 	
 	
@@ -12,14 +12,16 @@ class FeedbacksController < ApplicationController
 	end
 	
 	def create
-		params[:feedback][:user_id] = params[:user_id]
+                @user = current_user
 		@feedback = Feedback.new(params[:feedback])
+                @feedback.user = @user
+                
 		if @feedback.save 
 			flash[:notice] = "feedback submitted successfully!"
-			render :new
+			redirect_to @user
 			
 		else 
-			flash[:warning] = "Error submitting feedback."
+			flash.now[:warning] = "Error submitting feedback."
 			render :new
 		end
 			

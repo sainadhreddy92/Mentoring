@@ -2,10 +2,11 @@ Mentoring::Application.routes.draw do
 	
   get 'sessions/new'
 
-	resources :users
+	resources :users 
+        resources :feedbacks
 	resources :current_mentors
 	resources :current_mentees
-        resources :feedbacks
+        
 	resources :application
 	get 'login'     => 'sessions#new'
 	post 'login'    => 'sessions#create'
