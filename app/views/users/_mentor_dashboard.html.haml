@@ -4,20 +4,16 @@
 %table#users
   %thead
     %tr
-      %th Email ID
-      %th Work Group
+      %th CEC ID
       %th Work Location
-      %th Password
       %th User Role
       
       
       
   %tbody    
     %tr
-      %td= @user.cisco_email
-      %td= @user.current_group
+      %td= @user.cec_id
       %td= @user.work_city
-      %td= @user.password_digest
       %td= @user.user_role
       
         

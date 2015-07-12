@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20150629212029) do
 
   create_table "users", force: :cascade do |t|
     t.string  "user_role"
-    t.string  "cisco_email"
+    t.string  "cec_id"
     t.string  "current_group"
     t.string  "work_city"
     t.string  "job_role"

@@ -8,7 +8,7 @@
     = form_for(@user) do |f|
       = render 'error_messages'
       = f.hidden_field :user_role, value: 'mentor'
-      = f.label :'Partcipating PE/DE/Dir/Sr Dir/VP Information'
+      = f.label :participating,'Partcipating PE/DE/Dir/Sr Dir/VP Information'
       = f.label :'Cisco Email'
       = f.email_field :cisco_email
       = f.label :'Password',class: 'form-control'

@@ -4,20 +4,17 @@
 %table#users
   %thead
     %tr
-      %th Email ID
-      %th Work Group
+      %th CEC ID
       %th Work Location
-      %th Password
+      
       
       
       
   %tbody    
     %tr
-      %td= @user.cisco_email
-      %td= @user.current_group
+      %td= @user.cec_id
       %td= @user.work_city
-      %td= @user.password_digest
-      
+            
          
 
 = link_to 'Delete Mentor/Mentee', users_path, :class =>'btn'

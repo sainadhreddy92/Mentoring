@@ -4,17 +4,19 @@
   %thead
     %tr
       %th Feedback Number
-      %th Goals
+      %th Submitted by
+      %th 1.Did the program help you in acheive the goals ?
       %th Suggest
       %th Support
-      %th User ID
+      
       
   %tbody
   - @feedbacks.each do |feedback| 
     %tr
       %td= feedback.id
+      %td= feedback.user.cec_id
       %td= feedback.goal_status
       %td= feedback.suggest_status
       %td= feedback.support_status
-      %td= feedback.user.work_group
+      
           

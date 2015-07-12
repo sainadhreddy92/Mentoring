@@ -4,17 +4,19 @@
   %thead
     %tr
       %th Feedback Number
-      %th Goals
-      %th Suggest
-      %th Support
-      %th User ID
+      %th Submitted by
+      %th 1.Did the program help you in acheive the goals ?
+      %th 2.Would you suggest this program to your friends and peers?
+      %th 3.Did you get adequate support for this program?
+      
       
   %tbody
   - @feedbacks.each do |feedback| 
     %tr
       %td= feedback.id
+      %td= feedback.user.cec_id
       %td= feedback.goal_status
       %td= feedback.suggest_status
       %td= feedback.support_status
-      %td= feedback.user.cisco_email
+      
           

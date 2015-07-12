@@ -3,12 +3,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(cisco_email: params[:session][:cisco_email].downcase)
+    user = User.find_by(cec_id: params[:session][:cec_id].downcase)
     if user && user.authenticate(params[:session][:password])
        log_in user
        redirect_to user
     else
-      flash.now[:warning] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:warning] = 'Invalid Id/password combination' # Not quite right!
       render 'new'
     end
   end
