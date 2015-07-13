@@ -1,10 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: 'csg-mentoring-core'
+  default from: 'sachilig@cisco.com'
 
   def notify(user)
     @user = user
-    email = user.cec_id + 'cisco.com'
-    mail(to: email,subject: "Notification")
+    email = user.cec_id + '@cisco.com'
+    mail(to: email,subject: "CSG Mentoring Tool")
   end
 	
 
