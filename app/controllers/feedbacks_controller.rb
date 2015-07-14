@@ -17,6 +17,10 @@ class FeedbacksController < ApplicationController
                 @feedback.user = @user
                 
 		if @feedback.save 
+                       if @feedback.problem == 'Yes'
+   				UserMailer.alert(@user).deliver
+                       end
+                     
 			flash[:notice] = "feedback submitted successfully!"
 			redirect_to @user
 			
