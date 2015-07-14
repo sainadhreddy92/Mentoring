@@ -1,9 +1,16 @@
+
+
 class UsersController < ApplicationController
 
 		
-	def index
+	def mentors
        	  @mentors = User.where("user_role == 'mentor'")
-          @mentees = User.where("user_role == 'mentee'")
+          
+	end
+    
+        def mentees
+       	  @mentees = User.where("user_role == 'mentee'")
+          
 	end
 	
 	
@@ -18,7 +25,7 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-                        UserMailer.notify(@user).deliver
+                        #UserMailer.notify(@user).deliver
     			log_in @user
       			flash[:notice] = "User Created Successfully!"
       			redirect_to @user
@@ -37,9 +44,15 @@ class UsersController < ApplicationController
         end
 
 	def destroy
-    		User.find(params[:id]).destroy
+             if User.find(params[:id]).user_role == 'mentor'
+                User.find(params[:id]).destroy
     		flash[:success] = "User deleted"
-    		redirect_to users_url
+    		redirect_to mentors_users_url
+             else
+		User.find(params[:id]).destroy
+    		flash[:success] = "User deleted"
+    		redirect_to mentees_users_url
+	     end
   	end
 	
 end
