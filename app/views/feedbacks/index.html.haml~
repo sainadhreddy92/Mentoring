@@ -1,4 +1,4 @@
-= stylesheet_link_tag 'all'
+= stylesheet_link_tag 'new'
 %h1 All Feedbacks
 %table#feedbacks
   %thead
@@ -6,8 +6,9 @@
       %th Feedback Number
       %th Submitted by
       %th 1.Did the program help you in acheive the goals ?
-      %th Suggest
-      %th Support
+      %th 2.Would you suggest this program to your friends and peers?
+      %th 3.Did you get adequate support for this program?
+      %th Any Suggestions/Comments
       
       
   %tbody
@@ -18,5 +19,6 @@
       %td= feedback.goal_status
       %td= feedback.suggest_status
       %td= feedback.support_status
+      %td= feedback.
       
           

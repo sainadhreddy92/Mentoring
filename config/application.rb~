@@ -27,5 +27,6 @@ module Mentoring
     config.assets.precompile += ["login.css"]
     config.assets.precompile += ["all.css"]
     config.assets.precompile += ["forms.css"]
+    config.assets.precompile += ["new.css"]
   end
 end

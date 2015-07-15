@@ -5,13 +5,13 @@
 %table#users
   %thead
     %tr
-      %th Email ID
+      %th CEC ID
       %th Work Group
       %th Work Location
       
   %tbody    
     %tr
-      %td= @user.cisco_email
+      %td= @user.cec_id
       %td= @user.current_group
       %td= @user.work_city
         
