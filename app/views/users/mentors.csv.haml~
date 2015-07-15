@@ -1,4 +1,4 @@
-- headers = ['CEC ID', 'password']
+- headers = ['CEC ID', 'Work Location','Job Role','Conflict Resolution','Customer Know-How','Executive to acheive results','Personal Branding','Leading Change','Align and Influence','Managing Without Authority','Win-Win Negotiation','Career Exploration','Effective Communication','Creative Thinking/Think Out of the box','Technical Know How(List Areas)','Any Other']
 = CSV.generate_line headers
 - @mentors.each do |mentor|
-  = CSV.generate_line([mentor.cec_id, mentor.password])
+  = CSV.generate_line([mentor.cec_id, mentor.work_city,mentor.job_role,mentor.conflict_resolution,mentor.customer_know_how,mentor.exec_acheive_results,mentor.personal_branding,mentor.leading_change,mentor.align_and_influence,mentor.managing_without_authority,mentor.win_win_negotiation,mentor.career_exploration,mentor.effective_communication,mentor.think_out_box,mentor.tech_areas,mentor.other_areas]).html_safe

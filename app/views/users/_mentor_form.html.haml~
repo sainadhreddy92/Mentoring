@@ -1,5 +1,5 @@
 %script(src ="/app/assets/a.js")
-= stylesheet_link_tag 'all'
+= stylesheet_link_tag 'forms'
 
 %h1 Mentor Registration
 
@@ -9,8 +9,8 @@
       = render 'error_messages'
       = f.hidden_field :user_role, value: 'mentor'
       = f.label :participating,'Partcipating PE/DE/Dir/Sr Dir/VP Information'
-      = f.label :'Cisco Email'
-      = f.email_field :cisco_email
+      = f.label :'CEC ID'
+      = f.text_field :cec_id
       = f.label :'Password',class: 'form-control'
       = f.password_field :password
       = f.label :'Password Confirmation',class: 'form-control'

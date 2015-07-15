@@ -1,5 +1,5 @@
 %script(src ="/app/assets/a.js")
-= stylesheet_link_tag 'all'
+#= stylesheet_link_tag 'forms'
 
 %h1 Mentee Registration
 
@@ -10,7 +10,7 @@
       = f.label :'Mentee Information'
       = f.hidden_field :user_role, value: 'mentee'
       = f.label :'CEC ID'
-      = f.email_field :cec_id
+      = f.text_field :cec_id
       = f.label :'Password'
       = f.password_field :password
       = f.label :'Password Confirmation'

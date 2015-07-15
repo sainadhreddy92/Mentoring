@@ -26,5 +26,6 @@ module Mentoring
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile += ["login.css"]
     config.assets.precompile += ["all.css"]
+    config.assets.precompile += ["forms.css"]
   end
 end
