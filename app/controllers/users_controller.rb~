@@ -5,11 +5,25 @@ class UsersController < ApplicationController
 		
 	def mentors
        	  @mentors = User.where("user_role == 'mentor'")
+          respond_to do |format|
+           format.html
+           format.csv do
+            headers['Content-Disposition'] = "attachment; filename=\"Mentors-list\""
+            headers['Content-Type'] ||= 'text/csv'
+           end
+          end
           
 	end
     
         def mentees
        	  @mentees = User.where("user_role == 'mentee'")
+          respond_to do |format|
+           format.html
+           format.csv do
+            headers['Content-Disposition'] = "attachment; filename=\"Mentors-list\""
+            headers['Content-Type'] ||= 'text/csv'
+           end
+          end
           
 	end
 	

@@ -1,0 +1,4 @@
+- headers = ['CEC ID', 'password']
+= CSV.generate_line headers
+- @mentors.each do |mentor|
+  = CSV.generate_line([mentor.cec_id, mentor.password])

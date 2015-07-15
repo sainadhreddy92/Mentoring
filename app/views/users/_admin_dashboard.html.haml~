@@ -21,3 +21,6 @@
 = link_to 'Delete Mentees', mentees_users_path, :class =>'btn'
 
 = link_to 'Feedback Results', feedbacks_path, :class =>'btn'
+
+= link_to 'Download Mentors List ', mentors_users_path(format: :csv)
+= link_to 'Download Mentees List ', mentees_users_path(format: :csv)
