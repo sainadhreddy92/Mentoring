@@ -20,7 +20,7 @@ class UsersController < ApplicationController
           respond_to do |format|
            format.html
            format.csv do
-            headers['Content-Disposition'] = "attachment; filename=\"Mentors-list\""
+            headers['Content-Disposition'] = "attachment; filename=\"Mentees-list\""
             headers['Content-Type'] ||= 'text/csv'
            end
           end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-                        #UserMailer.notify(@user).deliver
+                        UserMailer.notify(@user).deliver
     			log_in @user
       			flash[:notice] = "User Created Successfully!"
       			redirect_to @user
