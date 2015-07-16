@@ -7,10 +7,9 @@ class UsersController < ApplicationController
        	  @mentors = User.where("user_role == 'mentor'")
           respond_to do |format|
            format.html
-           format.csv do
-            headers['Content-Disposition'] = "attachment; filename=\"Mentors-list\""
-            headers['Content-Type'] ||= 'csv'
-           end
+           format.csv { send_data @mentors.to_csv,:filename => "Mentorslist.csv" }
+            
+           
           end
           
 	end
@@ -19,10 +18,8 @@ class UsersController < ApplicationController
        	  @mentees = User.where("user_role == 'mentee'")
           respond_to do |format|
            format.html
-           format.csv do
-            headers['Content-Disposition'] = "attachment; filename=\"Mentees-list\""
-            headers['Content-Type'] ||= 'csv'
-           end
+           format.csv { send_data @mentees.to_csv,:filename => "Menteeslist.csv" }
+           
           end
           
 	end
