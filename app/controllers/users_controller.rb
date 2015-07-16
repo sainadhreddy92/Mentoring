@@ -9,7 +9,7 @@ class UsersController < ApplicationController
            format.html
            format.csv do
             headers['Content-Disposition'] = "attachment; filename=\"Mentors-list\""
-            headers['Content-Type'] ||= 'text/csv'
+            headers['Content-Type'] ||= 'csv'
            end
           end
           
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
            format.html
            format.csv do
             headers['Content-Disposition'] = "attachment; filename=\"Mentees-list\""
-            headers['Content-Type'] ||= 'text/csv'
+            headers['Content-Type'] ||= 'csv'
            end
           end
           
