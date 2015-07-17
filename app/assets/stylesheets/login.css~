@@ -3,6 +3,10 @@
 
 /* universal */
 
+.img{
+ margin-top: 0px;
+}
+
 body {
   padding-top: 60px;
 }

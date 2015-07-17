@@ -10,4 +10,4 @@
       = f.password_field :password, class: 'form-control'
       = f.submit "Log in", class: "btn btn-primary"
     %p
-      Not Registered yet? #{link_to "Register Now!",application_index_path}
+      Not Registered yet? #{link_to "Register Now!",users_path}

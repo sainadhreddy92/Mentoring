@@ -5,13 +5,21 @@
 %html
   %head    
     %title CSG Mentoring
+    %script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    %script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    - if logged_in?
-      = link_to "Log out", logout_path, method: :delete
+    
     
   %body
+    %div{:class => "navigation"}      
+      %div{:class => "image"}
+        %img{:src => "assets/logo.png"}
+          - if logged_in?
+            = link_to "Log out", logout_path, method: :delete      
+
+
     
     -# this goes just inside %body:
     - if flash[:notice]
