@@ -5,20 +5,22 @@
 %html
   %head    
     %title CSG Mentoring
-    %script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-    %script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    
+    - if logged_in?
+      = link_to "Log out", logout_path, method: :delete      
+
     
   %body
     %div{:class => "navigation"}      
       %div{:class => "image"}
         %img{:src => "assets/logo.png"}
-          - if logged_in?
-            = link_to "Log out", logout_path, method: :delete      
-
+    %div{:style => "position:absolute;top:50px; width:1800px; z-index:2;font-size:300%"}
+      %center
+        %font{:color => "white"}
+          CSG Mentoring
+          
 
     
     -# this goes just inside %body:

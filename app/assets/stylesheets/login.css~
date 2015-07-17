@@ -3,13 +3,7 @@
 
 /* universal */
 
-.img{
- margin-top: 0px;
-}
 
-body {
-  padding-top: 60px;
-}
 
 section {
   overflow: auto;
@@ -17,14 +11,6 @@ section {
 
 textarea {
   resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
 }
 
 #notice, #warning {
@@ -67,4 +53,13 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+  
+  text-align: center;  
+  display: block;
+  font-size: 30px;
 }

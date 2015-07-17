@@ -3,6 +3,6 @@
 %h1 Welcome to CSG Mentoring Program
 
 %div#menuDiv
-	= link_to 'Register as a Mentor', new_user_path(user_role: 'mentor'), :class =>'btn'
-	= link_to 'Register as a Mentee', new_user_path(user_role: 'mentee'), :class =>'btn'
+	= link_to 'Register as a Mentor', new_user_path(user_role: 'mentor') 
+	= link_to 'Register as a Mentee', new_user_path(user_role: 'mentee')
 	
