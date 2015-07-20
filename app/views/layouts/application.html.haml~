@@ -15,7 +15,7 @@
   %body
     %div{:class => "navigation"}      
       %div{:class => "image"}
-        %img{:src => "assets/logo.png"}
+        %img{:src => "http://wwwin.cisco.com/cec/framework/3.2.0/i/logo.gif"}
     %div{:style => "position:absolute;top:50px; width:1800px; z-index:2;font-size:300%"}
       %center
         %font{:color => "white"}

@@ -1,5 +1,5 @@
 %script(src ="/app/assets/a.js")
-= stylesheet_link_tag 'forms'
+= stylesheet_link_tag 'login'
 
 %h1 Mentor Registration
 

@@ -12,15 +12,12 @@ html, body {
   
  }
 
-.banner {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: "assets/logo.png";
-  width: 180px; /* Width of new image */
-  height: 236px; /* Height of new image */
-  padding-left: 180px; /* Equal to width of new image */
+#image{
+ display: inline;
+ position: relative;
 }
+
+
 a {
   background: transparent;
   color: black;
@@ -35,6 +32,7 @@ h1 {
   color: black;
   text-align: center;
   font-size: 38px; font-family: 'Tangerine', serif; padding-bottom: 10px;
+  margin-top :100px;
 }
 
 h1.title {
