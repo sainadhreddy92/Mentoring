@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,600italic,400italic,300italic,700italic);
 
 html, body {
@@ -20,7 +22,7 @@ html, body {
 
 a {
   background: transparent;
-  color: black;
+  
   text-decoration: underline;
   font-weight: bold;
   text-align: center;  
@@ -96,10 +98,6 @@ input[type = 'submit']{
   
   padding: 3px;
   font-size: 14px;
-  color: #f2f2f2;
-  background: #E05151;
-  border: 0;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;

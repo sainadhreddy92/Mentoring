@@ -1,4 +1,5 @@
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 html, body {
   margin: 10;
   padding: 0;  
@@ -45,8 +46,7 @@ div#main {
 }
 
 a {
-  background: transparent;
-  color: black;
+  
   text-decoration: underline;
   font-weight: bold;
   text-align: center;  

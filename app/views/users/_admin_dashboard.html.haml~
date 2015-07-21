@@ -1,4 +1,4 @@
-= stylesheet_link_tag 'all'
+= stylesheet_link_tag 'new'
 %h1 Welcome to Admin Dashboard
 %h2 Admin's Details
 %table#users

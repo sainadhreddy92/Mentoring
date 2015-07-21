@@ -25,7 +25,7 @@ module Mentoring
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile += ["login.css"]
-    config.assets.precompile += ["all.css"]
+    config.assets.precompile += ["admin.css"]
     config.assets.precompile += ["forms.css"]
     config.assets.precompile += ["new.css"]
   end
