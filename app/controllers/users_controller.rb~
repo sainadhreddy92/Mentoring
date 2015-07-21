@@ -31,6 +31,11 @@ class UsersController < ApplicationController
 
 	def new
 	 @user = User.new
+          if params[:user_role]=='mentor'
+              render :partial => 'users/mentor_form', :layout => 'partial'
+	  else
+  	      render :partial => 'users/mentee_form', :layout => 'partial'
+     	  end
 	end
 
 	def create
