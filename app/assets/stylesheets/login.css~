@@ -1,4 +1,8 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+
+.js #flash {display: none;}
 /* universal */
 
 

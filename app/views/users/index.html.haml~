@@ -1,7 +1,6 @@
-=
-
+= stylesheet_link_tag 'login'
 -# homepage
-%h1 <b>About the Program</b>
+%h1 <b><font color = #297CCF>About the Program</font></b>
 <p> CSG Mentoring program is initiated to address the growing gap of women in leadership and senior technical talent within CSG, to create a community that inspires and helps the development of core and soft skills for women engineers and to promote culture of cohesiveness. </p>
 
 %div#menuDiv
