@@ -1,4 +1,5 @@
 = stylesheet_link_tag 'new'
+= link_to 'Go Back', current_user, :class => 'navbar-link' 
 %h1 All Feedbacks
 %table#feedbacks
   %thead
@@ -19,6 +20,6 @@
       %td= feedback.goal_status
       %td= feedback.suggest_status
       %td= feedback.support_status
-      %td= feedback.
+      %td= feedback.suggestions
       
           

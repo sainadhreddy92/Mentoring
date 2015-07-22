@@ -1,5 +1,6 @@
 %script(src ="/app/assets/a.js")
-= stylesheet_link_tag 'login'
+= stylesheet_link_tag 'forms'
+= link_to 'Back to Registrationspage', users_path,:class => 'navbar-link' 
 
 %h1 Mentor Registration
 

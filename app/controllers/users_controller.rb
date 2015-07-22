@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 	
 	def show
 	   @user = User.find(params[:id])
+           
 	end
 
 	def new
@@ -36,7 +37,7 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-                        UserMailer.notify(@user).deliver
+                        #UserMailer.notify(@user).deliver
     			log_in @user
       			flash[:notice] = "User Created Successfully!"
       			redirect_to @user

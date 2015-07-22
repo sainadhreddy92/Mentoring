@@ -1,5 +1,6 @@
 %script(src ="/app/assets/a.js")
 = stylesheet_link_tag 'forms'
+= link_to 'Go Back', users_path,:class => 'navbar-link'
 
 %h1 Mentee Registration
 
@@ -8,8 +9,7 @@
     = form_for(@user) do |f|
       = render 'error_messages'
       = f.hidden_field :user_role, value: 'mentee'
-      = f.label :'Mentee Information'
-      
+      = f.label :'Mentee Information'     
       = f.label :'CEC ID'
       = f.text_field :cec_id
       = f.label :'Password'

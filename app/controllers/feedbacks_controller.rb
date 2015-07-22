@@ -18,7 +18,7 @@ class FeedbacksController < ApplicationController
                 
 		if @feedback.save 
                        if @feedback.problem == 'Yes'
-   				UserMailer.alert(@user).deliver
+   				#UserMailer.alert(@user).deliver
                        end
                      
 			flash[:notice] = "feedback submitted successfully!"
