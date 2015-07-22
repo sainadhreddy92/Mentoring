@@ -1,8 +1,9 @@
-.js #flash {display: none;}
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,600italic,400italic,300italic,700italic);
+
 
 html, body {
   margin: 10;
@@ -112,8 +113,8 @@ text{
 input[type = 'submit']{	
   display: block;
   width: relative;
-  background: #E05151;
-  color: #297CCF;
+  background: #297CCF;
+  color: #f2f2f2;
   padding: 3px;
   font-size: 14px;
   cursor: pointer;

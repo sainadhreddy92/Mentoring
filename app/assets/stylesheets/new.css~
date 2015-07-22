@@ -60,7 +60,7 @@ div#main {
 }
 
 .navbar-link {
-  background: #99ccff;
+  background: #297CCF;
   border: 0;
   border-radius: 5px;
   cursor: pointer;

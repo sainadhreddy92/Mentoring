@@ -1,5 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+.js #flash {display: none;}
+
 html, body {
   margin: 10;
   padding: 0;  

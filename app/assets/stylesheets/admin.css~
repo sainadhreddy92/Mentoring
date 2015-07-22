@@ -1,3 +1,4 @@
+.js #flash {display: none;}
 @import "bootstrap-sprockets";
 @import "bootstrap";
 html, body {
@@ -18,7 +19,7 @@ html, body {
   cursor: pointer;
   position: relative;
   display: block;
-  width: relative;
+  width: 100px;
   color: white;
   margin: 7px auto;
   text-decoration: none;
