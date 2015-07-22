@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	 
-                
+                document.documentElement.className = 'js';
 
 		if($('#user_tech_know').is(':checked')) 
 			$('#user_tech_areas').show();

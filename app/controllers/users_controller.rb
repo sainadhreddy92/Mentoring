@@ -61,6 +61,12 @@ class UsersController < ApplicationController
     		flash[:success] = "User deleted"
     		redirect_to mentors_users_url
              else
+                @feedbacks = Feedback.where(user_id: params[:id])
+                if @feedbacks!= 0
+          	      @feedbacks.each do |feedback|
+          		      	feedback.destroy
+		      end
+                end
 		User.find(params[:id]).destroy
     		flash[:success] = "User deleted"
     		redirect_to mentees_users_url

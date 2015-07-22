@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 	def create
     		@user = User.new(params[:user])    # Not the final implementation!
     		if @user.save
-                        UserMailer.notify(@user).deliver
+                        #UserMailer.notify(@user).deliver
     			log_in @user
       			flash[:notice] = "User Created Successfully!"
       			redirect_to @user
@@ -61,6 +61,12 @@ class UsersController < ApplicationController
     		flash[:success] = "User deleted"
     		redirect_to mentors_users_url
              else
+                @feedbacks = Feedback.where(user_id: params[:id])
+                if @feedbacks!= 0
+          	      @feedback.each do |feedback|
+          		      	feedback.destroy
+		      end
+                end
 		User.find(params[:id]).destroy
     		flash[:success] = "User deleted"
     		redirect_to mentees_users_url
