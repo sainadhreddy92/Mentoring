@@ -1,7 +1,8 @@
 
 $(document).ready(function(){
-	
-                  
+	 
+                $('#flash').hide();
+
 		if($('#user_tech_know').is(':checked')) 
 			$('#user_tech_areas').show();
 		else 
