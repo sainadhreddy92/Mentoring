@@ -8,8 +8,7 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    :javascript
-      document.documentElement.className = 'js';
+    
         
     
   %body
@@ -22,7 +21,7 @@
           CSG Mentoring
     - if logged_in?
       = link_to "Log out", logout_path, method: :delete, :class => 'navbar-link'  
-
+    
           
 
     

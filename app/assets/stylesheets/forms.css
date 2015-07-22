@@ -1,9 +1,5 @@
 
-.js #flash {display: none;}
-@import "bootstrap-sprockets";
-@import "bootstrap";
 import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,600italic,400italic,300italic,700italic);
-
 
 html, body {
   margin: 10;
