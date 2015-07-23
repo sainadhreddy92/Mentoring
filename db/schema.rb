@@ -13,18 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150629212029) do
 
-  create_table "current_mentees", force: :cascade do |t|
-    t.string "mentor_id"
-    t.string "are_of_interest"
-    t.text   "notes"
-  end
-
-  create_table "current_mentors", force: :cascade do |t|
-    t.string "mentee_id"
-    t.string "are_of_interest"
-    t.text   "notes"
-  end
-
   create_table "feedbacks", force: :cascade do |t|
     t.string   "problem"
     t.string   "goal_status"
