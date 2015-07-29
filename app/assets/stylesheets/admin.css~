@@ -1,6 +1,11 @@
-.js #flash {display: none;}
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+
+.btn{
+
+color: black;
+
+}
+
 html, body {
   margin: 10;
   padding: 0;  
