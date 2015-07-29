@@ -1,8 +1,5 @@
-
 .js #flash {display: none;}
-@import "bootstrap-sprockets";
-@import "bootstrap";
-import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,600italic,400italic,300italic,700italic);
+
 
 
 html, body {
@@ -12,7 +9,7 @@ html, body {
   color: black;
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
-  text-align: center;
+  
   display: block;
   
  }
@@ -105,8 +102,7 @@ label {
 text{
   display:block;
   position:relative;
-  text-align:center;
-  width:20%;
+   width:20%;
   background-color:#00FF00;
 }
 
